@@ -1,0 +1,24 @@
+.contacts-container {
+    position: fixed;
+    bottom: 0;
+}
+
+.contacts-list {
+    list-style: none;
+    display: flex;
+}
+
+.contact-item {
+    padding: 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-item:hover {
+    filter: drop-shadow(0 0 0.75rem rgba(255, 255, 255, 0.5));
+    transform: scale(1.2, 1.2);
+}
+
+.contact-img {
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+}

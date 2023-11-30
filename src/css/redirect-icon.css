@@ -1,0 +1,14 @@
+.redirect-img-hover {
+    padding: 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.redirect-img-hover:hover {
+    filter: drop-shadow(0 0 0.75rem rgba(255, 255, 255, 0.5));
+    transform: scale(1.2, 1.2);
+}
+
+.redirect-img {
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+}
