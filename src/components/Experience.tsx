@@ -1,59 +1,19 @@
-import experiences from "../util/Experiences";
-import '../css/experience.css';
-import TechCard from "./TechCard";
-import SectionTitle from "./SectionTitle";
-import { RedirectIcon, RedirectIconType } from "./RedirectIcon";
-
-export default function Experience() {
-
-    const entries = experiences.map((experience) => {
-        return (
-            <li key={experience.title} className="experience-item">
-                <div className="card">
-                    <div className="timeline">
-                        {experience.start} - {experience.end}
-                        <div className="tech-container">
-                            {experience.tech.map((tech) => {
-                                return (
-                                    <TechCard key={experience.title + tech} techName={tech}/>
-                                );
-                            })}
-                        </div>
-                    </div>
-                    <div className="details">
-                        <h3>
-                            <a 
-                                className="employer-link"
-                                href={experience.employerLink} 
-                                target="_blank" 
-                                rel="noreferrer">
-                                    {experience.title}
-                                    <RedirectIcon link={experience.employerLink} iconType={RedirectIconType.ARROW_POINTING_UP}/>
-                            </a>
-                            
-                            </h3>
-                        <h4>{experience.employer} - {experience.location}</h4>
-                        <ul className="responsibilities-list">
-                            {experience.responsibilities.map((res, index) => {
-                                return (
-                                    <li key={experience.title + 'res' + index}>
-                                        {res}
-                                    </li>
-                                );
-                            })}
-                        </ul>
-                    </div>
-                </div>
-            </li>
-        );
-    });
-
-    return(
-        <div className="container-blur">
-            <SectionTitle title="Experience" />
-            <ol className="experiences-list">
-                {entries}
-            </ol>
-        </div>
+const Experience: React.FC = () => {
+    return (
+        <section id="experience" className="py-16">
+            <h2 className="text-3xl font-bold text-[#ffb703] mb-6">Experience</h2>
+            <ul className="space-y-4">
+                <li className="bg-white p-4 rounded-lg shadow-sm">
+                    <h3 className="font-semibold text-[#00897b]">Frontend Developer @ CozyCorp</h3>
+                    <p className="text-sm text-gray-600">Jan 2023 – Present</p>
+                    <p className="mt-2 text-[#444]">
+                        Built whimsical UIs in React and Tailwind, optimized user experience for mobile.
+                    </p>
+                </li>
+                {/* Add more experience entries here */}
+            </ul>
+        </section>
     );
-}
+};
+
+export default Experience;
