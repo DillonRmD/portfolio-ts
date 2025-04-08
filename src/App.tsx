@@ -1,19 +1,15 @@
-import Header from "./components/Header";
-import Skills from "./components/Skills.tsx";
-import Projects from "./components/Projects";
-import Experience from "./components/Experience";
-import Contact from "./components/Contact";
+import Projects from "./features/Project/ProjectsPage.tsx";
+import ExperiencePage from "./features/Experience/ExperiencePage.tsx";
+import LandingPage from "./features/Landing/LandingPage.tsx";
+import {Route, Routes} from "react-router";
 
 export default function App() {
+
     return (
-        <div className="bg-[#fef6e4] text-[#272343] font-sans">
-            <Header/>
-            <main className="max-w-5xl mx-auto px-4">
-                <Skills/>
-                <Projects/>
-                <Experience/>
-                <Contact/>
-            </main>
-        </div>
+        <Routes>
+            <Route index element={<LandingPage />} />
+            <Route path='/projects' element={<Projects />} />
+            <Route path='/experience' element={<ExperiencePage />} />
+        </Routes>
     );
 }
