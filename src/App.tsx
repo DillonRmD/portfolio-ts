@@ -1,16 +1,15 @@
-import LeftContainer from './components/LeftContainer';
-import RightContainer from './components/RightContainer';
-import './css/main.css';
+import Projects from "./features/Project/ProjectsPage.tsx";
+import ExperiencePage from "./features/Experience/ExperiencePage.tsx";
+import LandingPage from "./features/Landing/LandingPage.tsx";
+import {Route, Routes} from "react-router";
 
 export default function App() {
-  return (
-    <div className="main-container">
-      <header className="left-container">
-        <LeftContainer />
-      </header>
-      <main className="right-container">
-        <RightContainer />
-      </main>
-    </div>
-  )
+
+    return (
+        <Routes>
+            <Route index element={<LandingPage />} />
+            <Route path='/projects' element={<Projects />} />
+            <Route path='/experience' element={<ExperiencePage />} />
+        </Routes>
+    );
 }
