@@ -16,19 +16,19 @@ export default function ProjectsPage() {
             <Backdrop />
             <div className="grid md:grid-cols-2 gap-6">
                 {projects.map((project, index) => (
-                    <div key={index} className="bg-white p-6 rounded-xl shadow-md">
-                        <div className="flex justify-between items-center">
+                    <div key={index} className="border border-gray-300 rounded-lg p-6 bg-[#e8e5dc] p-6 rounded-xl shadow-md">
+                        <div className="flex justify-between items-center pb-1">
                             <a className="flex flex-wrap items-center gap-1" href={project.getRedirectLink}
                                target="_blank"
                                rel="noopener noreferrer">
                                 <h3 className="text-xl font-semibold text-[#00897b]">{project.getTitle}</h3>
                                 <SquareArrowOutUpRight color={'#00897b'}/>
                             </a>
-                            <a href={project.getSourceLink} target="_blank" rel="noopener noreferrer">
+                            <a className="flex flex-wrap items-center" href={project.getSourceLink} target="_blank" rel="noopener noreferrer">
                                 <img src='./github.png' alt='' className="w-7 h-7 rounded-xl"/>
                             </a>
                         </div>
-                        <img src={project.getImageSource} alt={''}/>
+                        <img className="w-auto h-50 border-4 border-gray-900 rounded-lg" src={project.getImageSource} alt={''}/>
                         <p className="text-[#555] mt-2">{project.getDescription}</p>
                         <div className="mt-4 flex flex-wrap gap-2">
                             {project.getTech.map((tech) => (
