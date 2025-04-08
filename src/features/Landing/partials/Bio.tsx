@@ -12,14 +12,14 @@ export default function Bio() {
         return () => clearTimeout(timeout);
     }, []);
 
-    const maxWidth = isMobile ? 80 : 40;
+    const maxWidth = isMobile ? 80 : 25;
     const transform = isVisible
         ? "transform translate-x-0 opacity-100"
         : "transform translate-x-full opacity-0";
 
     return (
         <div
-            className={`${transform} transition-all duration-1000 ease-out max-w-[${maxWidth}%] w-full p-4 bg-transparent text-[#272343] mb-25`}
+            className={`${transform} transition-all duration-1000 ease-out max-w-[${maxWidth}%] w-full p-2 bg-transparent text-[#272343] mb-25`}
             style={{
                 transform: "translateX(0%)",
                 opacity: isVisible ? 1 : 0,
