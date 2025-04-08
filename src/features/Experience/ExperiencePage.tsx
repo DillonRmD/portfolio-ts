@@ -12,7 +12,7 @@ export default function ExperiencePage() {
     }
     
     return (
-        <div className="animate-[fade-in_0.75s_ease-in-out] relative bg-[#fef6e4] min-h-screen flex flex-col items-center justify-between text-[#272343] font-sans px-4 py-6 overflow-hidden">
+        <div className="animate-[fade-in_0.75s_ease-in-out] relative bg-[#fef6e4] min-h-screen flex flex-col items-center text-[#272343] font-sans px-4 py-6 overflow-hidden">
             <Backdrop />
             <NavigationBar />
             <div className="space-y-6">
