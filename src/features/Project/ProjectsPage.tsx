@@ -25,7 +25,7 @@ export default function ProjectsPage() {
                                 <SquareArrowOutUpRight color={'#00897b'}/>
                             </a>
                             <a href={project.getSourceLink} target="_blank" rel="noopener noreferrer">
-                                <img src='./../../../public/github.png' alt='' className="w-7 h-7 rounded-xl"/>
+                                <img src='./github.png' alt='' className="w-7 h-7 rounded-xl"/>
                             </a>
                         </div>
                         <img src={project.getImageSource} alt={''}/>
